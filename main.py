@@ -24,14 +24,19 @@ def calculate_and_display_crc():
     formatted_crc = format_crc_output(crc_value)
 
     crc_result_label.configure(text=f"CRC16: {formatted_crc}")
-    full_string_label.configure(text=f"Full String: {input_string}{formatted_crc}")
+    full_string_text = f"{input_string}{formatted_crc}"
+    full_string_label.configure(text=f"Full String: {full_string_text}")
+
+    # Copy the full string to clipboard
+    app.clipboard_clear()
+    app.clipboard_append(full_string_text)
 
 # GUI Elements
 # Input Label and Entry
 input_label = customtkinter.CTkLabel(app, text="Input String:")
 input_label.pack(pady=5)
 
-input_entry = customtkinter.CTkEntry(app, width=300)
+input_entry = customtkinter.CTkEntry(app, width=300, justify='center')
 input_entry.pack(pady=5)
 
 # Calculate Button
