@@ -2,7 +2,7 @@ from crc_calculator import string_to_bytes, calculate_crc16_modbus, format_crc_o
 
 input_str = "010300000001"
 expected_crc_val = 0x840A
-expected_formatted_crc = "0A84"
+expected_formatted_crc = "840A" # Changed from "0A84" to "840A"
 
 print(f"Input string: '{input_str}'")
 

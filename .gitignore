@@ -49,6 +49,7 @@
     # Logs and temporary files
     *.log
     tmp/
+    *~
     *.sqlite3
     *.db
 

@@ -67,5 +67,5 @@ def format_crc_output(crc_value: int) -> str:
     """
     low_byte = crc_value & 0xFF
     high_byte = (crc_value >> 8) & 0xFF
-    print(f"{low_byte} : {high_byte}")
-    return f"{low_byte:02X}{high_byte:02X}"
+    # print(f"{low_byte} : {high_byte}") # Optional: remove or comment out debugging print
+    return f"{high_byte:02X}{low_byte:02X}"
